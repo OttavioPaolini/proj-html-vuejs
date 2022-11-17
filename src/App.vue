@@ -1,8 +1,13 @@
 <script>
 import {store} from './store'
 
+import AppHeader from './components/AppHeader.vue';
 
 export default {
+  components:{
+    AppHeader,
+
+  },
     data(){
       return{
         store,
@@ -14,15 +19,22 @@ export default {
 </script>
 
 <template>
+<header>
+<AppHeader  :number="store.number" :mail="store.mail" :gps="store.gps"/>
+</header>
 
-  <h1>Tutto collegato </h1>
-  <h2>{{store.test}}</h2>
+<main>
+
+</main>
+
+<footer>
+
+</footer>
+  
 </template>
 
 <style lang="scss">
 @use "./assets/style/general.scss" as *;
+@use "./assets/style/partials/variables" as *;
 
-h1{
-  color: red;
-}
 </style>

@@ -6,4 +6,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+img{
+    max-width: 100%;
+}
 
+
+
+
+// LAYOUT
+.container{
+    width: 80%;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+
+    // probabile debug
+    height: 100%;
+}
+
+// UTILIY
+.pl-1{
+    padding-left: 1rem;
+}
