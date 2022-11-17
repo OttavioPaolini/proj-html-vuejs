@@ -1,11 +1,18 @@
 <script>
+import AppLogo from './AppLogo.vue';
 export default{
     name: "AppHeader",
+
+    components:{
+        AppLogo,
+    },
+
     props:{
         number: String,
         mail: String,
         gps: String,
-    }
+    },
+
 }
 </script>
 
@@ -35,10 +42,17 @@ export default{
     </section>
 
     <!-- navbar-section -->
-    <section class="header-nav">
-        <img src="../assets/img/jumbo.jpg" alt="">
-        <div class="container">
+    <section class="header">
+        <div class="opacity-layer">
+            <div class="container">
+                <div>
+                    <AppLogo />
+                </div>
+                <!-- <ul>
+                    li
+                </ul> -->
 
+            </div>
         </div>
     </section>
 
@@ -62,7 +76,21 @@ export default{
 }
 
 
-// HEADER-NAV-CSS
+// HEADER-CSS
+.header{
+    background-image: url("../assets/img/jumbo.jpg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    // debug
+    height: 500px;
+    .opacity-layer{
+        height: 100%;
+        background: rgba($color: #000000, $alpha: .4);
+    }
+}
 
 
 
