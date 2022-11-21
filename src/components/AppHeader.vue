@@ -12,14 +12,20 @@ export default{
         mail: String,
         gps: String,
     },
+    data(){
+        return{
+            menu: ["home", "service", "skills", "partners", "blog"]
 
+            
+        }
+    }
 }
 </script>
 
 <template>
     <!-- header-fixed -->
     <section class="header-fixed">
-        <div class="container">
+        <div class="container flex container-100">
             <div class="header-fixed__daily">
                 <i class="fa-solid fa-clock"></i>
                 <span class="pl-1">Open Hours: Mon - Sat - 9:00 - 18:00</span>
@@ -44,14 +50,25 @@ export default{
     <!-- navbar-section -->
     <section class="header">
         <div class="opacity-layer">
-            <div class="container">
+            <div class="container flex">
                 <div>
                     <AppLogo />
                 </div>
-                <!-- <ul>
-                    li
-                </ul> -->
+                <ul class="navbar">
+                    <li v-for="(item, index) in menu"><a href="">{{item}}</a></li>
+                    <li ><a class="btn btn-p" href="">get in touch</a></li>
+                </ul>
 
+            </div>
+            <div class="container-jumbo flex">
+                <div class="container-jumbo-text">
+                    <h1>Logistics that goes further.</h1>
+                    <p>For 20 years working with the most innovative in the field of transport.</p>
+                    <div>
+                        <a class="btn btn-p" href="">get in touch</a>
+                        <a class="btn btn-s" href="">read more</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -60,6 +77,7 @@ export default{
 
 <style lang="scss" scoped>
 @use "../assets/style/partials/variables" as *;
+@use "../assets/style/general.scss" as *;
 
 // HEADER-FIXED-CSS
 .header-fixed{
@@ -89,6 +107,39 @@ export default{
     .opacity-layer{
         height: 100%;
         background: rgba($color: #000000, $alpha: .4);
+    }
+    .container{
+        justify-content: space-between;
+        padding-top: 2rem;
+
+        ul{
+            display: flex;
+            color: $primary-font-white;
+            font-size: 1rem;
+            text-transform: uppercase;
+            li{
+                display: inline-block;
+                margin-left: 2rem;
+            }
+        }
+
+        &-jumbo{
+            width: 80%;
+            margin: 0 auto;
+            justify-content: end;
+            h1{
+                color: $primary-font-white;
+                font-size: 3.5rem;
+                
+            }
+            &-text{
+                width: 30%;
+
+                div{
+                    width: 20%;
+                }
+            }
+        }
     }
 }
 
