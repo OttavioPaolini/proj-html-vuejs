@@ -40,6 +40,7 @@ export default{
 </section>
 
 <section class="main_company">
+    <div class="container">
         <div class="flex">
             <div id="test" class="split flex">
                 <div class="text">
@@ -90,10 +91,11 @@ export default{
                     </ul>
                 </div>
             </div>
-            <div class="split">
-                <img src="../assets/img/about-5.jpg" alt="">
+            <div class="split split-dx">
+                <!-- <img id="img" src="../assets/img/about-5.jpg" alt=""> -->
             </div>
         </div>
+    </div>
 </section>
 
 <section class="main_tag">
@@ -149,14 +151,19 @@ export default{
 
 .main_company{
     background-color: $bg-dark;
-    .container{
-        
-    }
+    
+#img{
+    height: 100%;
+}
     .split{
         width: calc(100% / 2);
         text-align: end;
         color: $primary-font-white;
-
+       &-dx{
+        background-image: url("../assets/img/about-5.jpg");
+        background-size: cover;
+        background-position: center;
+       }
         .text{
             width: 50%;
             text-align: left;
@@ -205,6 +212,6 @@ export default{
     }
 }
 #test{
-    justify-content: end;
+    // justify-content: end;
 }
 </style>
