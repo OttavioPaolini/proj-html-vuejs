@@ -55,7 +55,7 @@ export default{
                     <AppLogo />
                 </div>
                 <ul class="navbar">
-                    <li v-for="(item, index) in menu"><a href="">{{item}}</a></li>
+                    <li v-for="(item, index) in menu" :key="index"><a href="">{{item}}</a></li>
                     <li ><a class="btn btn-p" href="">get in touch</a></li>
                 </ul>
 
@@ -64,10 +64,8 @@ export default{
                 <div class="container-jumbo-text">
                     <h1>Logistics that goes further.</h1>
                     <p>For 20 years working with the most innovative in the field of transport.</p>
-                    <div>
-                        <a class="btn btn-p" href="">get in touch</a>
-                        <a class="btn btn-s" href="">read more</a>
-                    </div>
+                    <a class="btn btn-p" href="">get in touch</a>
+                    <a class="btn btn-s" href="">read more</a>
                 </div>
             </div>
         </div>
@@ -125,11 +123,17 @@ export default{
 
         &-jumbo{
             width: 80%;
+            max-width: 1120px;
             margin: 0 auto;
             justify-content: end;
             &-text{
+                margin-top: 5rem;
+                color: $primary-font-white;
+                font-weight: 200;
+                a{
+                    margin-right: .5rem;
+                }
                 h1{
-                    color: $primary-font-white;
                     font-size: 3.5rem;
                                       
                 }

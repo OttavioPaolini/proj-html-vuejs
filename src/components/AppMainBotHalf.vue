@@ -7,6 +7,11 @@ export default{
         mail: String,
         gps: String,
     },
+    data(){
+        return{
+
+        }
+    }
 
 }
 </script>
@@ -21,10 +26,27 @@ export default{
             <p>Every week publish content about what is best in the business world.</p> 
             <span class="btn btn-p"><a href="">see all</a></span>
         </div>
+        <div class="flex">
+            <div class="cards cards-a">
+                <div class="opacity-layer flex">
+                    <h3>Increasing creativity is possible for everyone</h3>
+                </div>
+            </div>
+            <div class="cards cards-b">
+                <div class="opacity-layer flex">
+                    <h3>Because market research is part of the business plan</h3>
+                </div>
+            </div>
+            <div class="cards cards-c">
+                <div class="opacity-layer flex">
+                    <h3>Working from home is now a trend</h3>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="main-newsletter">
-    <div class="container-s flex">
+    <div class="container-xs flex">
         <div class="split">
             <div class="text">
                 <p class="blu-p">newsletter</p>
@@ -34,12 +56,12 @@ export default{
         </div>
         <div class="split">
             <div class="form">
-                <label for="Name"></label>
+                
                 <input type="text" id="Name" name="Name" placeholder="Name">
-                <label for="mail"></label>
+                
                 <input type="text" id="mail" name="mail" placeholder="Email">
-                <a href="" class="btn btn-p">subscribe</a>
             </div>
+            <a href="" class="btn btn-p">subscribe</a>
         </div>
     </div>
 </section>
@@ -50,6 +72,19 @@ export default{
                 <p class="blu-p">send a message</p>
                 <h3>Get in <span class="blu-shadow blu-shadow-text">Touch</span></h3>
                 <p>We will respond to your message ASAP.</p>
+                <div class="left">
+                    <input type="text" id="fname" name="firstname" placeholder="Name">
+                    <input type="num" id="phone" name="phone" placeholder="Phone">
+                </div>
+                <div class="right">
+                    <input type="mail" id="mail" name="mail" placeholder="Email">
+                    <select id="more" name="more">
+                        <option value="">More info</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                 <a href="" class="btn btn-p">send</a>
             </div>
             <div class="col-example">
@@ -86,6 +121,33 @@ export default{
 .flex{
     justify-content: space-between;
     align-items: center;
+
+    .cards{
+        margin-top: 2rem;
+        height: 350px;
+        background-size: cover;
+        width: calc(100% / 3 - 20px);
+        border-radius: 15px;
+        .opacity-layer{
+            border-radius: 15px;
+            text-align: center;
+        }
+        h3{
+            align-self: flex-end;
+            color:$primary-font-white;    
+            padding: 2rem;
+        }
+       &-a{
+        background-image: url("../assets/img/news-1.jpg");
+       }
+       &-b{
+        background-image: url("../assets/img/news-2.jpg");
+       }
+       &-c{
+        background-image: url("../assets/img/news-3.jpg");
+
+       }
+    }
 }
     
 
@@ -99,15 +161,39 @@ export default{
         color: $primary-font-white;
         
     }
-    .container-s{
+    .container-xs{
         height: 100%;
         
+        
         .split{
-        width: calc(100% / 2);
+        width: calc(100% / 2 - 20px);
+
+        .text {
+            padding:3rem;
+            h3{
+                margin: 1rem 0;
+            }
+        }
+        .btn{
+            margin: 1rem 0;
+        }
+        input{
+            width: 100%;
+            margin: 5px 0;
+            padding: .8rem;
+            border: none; 
+            background-color: lightgray;
+
+        }
         
     }
     }
+
 }
+
+
+
+
 
 // MAIN-CONTACT-STYLE
 
@@ -117,14 +203,49 @@ export default{
 
     .col-form{
         width: 70%;
+
+        textarea{
+            height: 200px;
+            resize: none;
+            width: 100%;
+            display: block;
+            margin-bottom: 2rem;
+            border: none;
+            padding: .8rem;
+            background-color: lightgray;
+            
+        }
+        .left,
+        .right{
+          ;
+            input,
+            select{
+                width: calc(100% / 2 - 10px);
+                margin:5px 5px 10px 0;  
+                padding: .8rem;
+                border: none; 
+                background-color: lightgray;             
+            }
+        }
+
     }
     .col-example{
         width: 30%;
+        padding: 0 2rem;
 
-        a{
+        a:not(:last-child){
             padding: 1rem 0;
             color:$dark-acqua;
-            display: inline-block;
+            display: block;
+
+            i{
+                background-color: rgba($color: $light-acqua, $alpha: .3);
+                padding: .8rem;
+                border-radius: 50%;
+            }
+        }
+        .btn-s{
+            color: $dark-acqua;
         }
     }
 }

@@ -1,6 +1,14 @@
 <script>
 export default{
     name: "AppMainTopHalf",
+
+
+    data(){
+        return{
+
+            
+        }
+    }
 }
 
 </script>
@@ -14,7 +22,8 @@ export default{
                 <p class="blu-p">our business areas</p>
                 <h2>Logistics Services</h2>
                 <p>we are leaders in providing logistics services with a set of cutting edge technologies and team of experienced and renowned professionals.</p>
-                 
+
+                <a class="btn btn-p" href="">read more</a>
             </div>
             <div class="card">
                 <img src="../assets/img/gallery-3.jpg" alt="">
@@ -32,9 +41,54 @@ export default{
 
 <section class="main_company">
         <div class="flex">
-            <div class="split">
-                <p class="blu-p">about the network</p>
-                <h2><span class="blu-shadow">The</span> Company</h2>
+            <div id="test" class="split flex">
+                <div class="text">
+                    <p class="blu-p">about the network</p>
+                    <h2><span class="blu-shadow">The</span> Company</h2>
+                    <p>With all of this expertise and capability comes an unrivalled commitment to customer service.</p>
+                    <ul>
+                        <li>
+                            <div class="box-sx">
+                                <small class="circle">
+                                    <span class="bigger">0</span>
+                                    <span>%</span>
+                                </small>
+                            </div>
+                            <div class="box-dx">
+                                <h4>Leadership</h4>
+                                <p>lorem ipsum va bene anche se scrivo altro</p>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="box-sx">
+                                <small class="circle">
+                                    <span class="bigger">0</span>
+                                    <span>%</span>
+                                </small>
+                            </div>
+                            <div class="box-dx">
+                                <h4>Leadership</h4>
+                                <p>lorem ipsum va bene anche se scrivo altro</p>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="box-sx">
+                                <small class="circle circle-b">
+                                    <span class="smaller">1</span>
+                                    <span>%</span>
+                                </small>
+                            </div>
+                            <div class="box-dx">
+                                <h4>Leadership</h4>
+                                <p>lorem ipsum va bene anche se scrivo altro</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="split">
                 <img src="../assets/img/about-5.jpg" alt="">
@@ -62,14 +116,19 @@ export default{
 @use "../assets/style/partials/variables" as *;
 @use "../assets/style/general.scss" as *;
 
-img{
-    
-}
+
 
 .main_logistic,
 .main_tag{
     background-color: $bg-main-lightgreen;
     padding: 4rem 0 ;
+}
+.main_tag{
+    img{
+        height: 30px;
+        filter: grayscale(20%);
+    }
+
 }
 .flex{
     justify-content: space-between;
@@ -97,9 +156,55 @@ img{
         width: calc(100% / 2);
         text-align: end;
         color: $primary-font-white;
+
+        .text{
+            width: 50%;
+            text-align: left;
+            padding: 5rem 0;
+            font-size: 1.2rem;
+            
+            p{
+                font-weight: 200;
+                padding: 1rem 0;
+            }
+            li{
+                display: flex;
+                margin: 1rem 0;
+
+                .box-sx{
+                    width: 25%;
+                    display: flex;
+                    justify-content: start;
+
+                    .bigger{
+                        font-size: 1.5rem;
+                    }
+                    .smaller{
+                        font-size: 1.5rem;
+                    }
+
+                    .circle{
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        border: 3px solid grey;
+                        border-radius: 50%;
+                        line-height: 50px;
+                        text-align: center;  
+                    }
+                    .circle-b{
+                        
+                    }
+                }
+                .box-dx{
+                    width: 75%;
+                    
+                }
+            }
+        }
     }
 }
-.main_tag img{
-   
+#test{
+    justify-content: end;
 }
 </style>
