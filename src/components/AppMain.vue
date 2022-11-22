@@ -1,4 +1,5 @@
 <script>
+import {store} from '../store'
 import AppMainTopHalf from './AppMainTopHalf.vue';
 import AppMainBotHalf from './AppMainBotHalf.vue';
 export default{
@@ -7,7 +8,12 @@ export default{
     components: {
         AppMainTopHalf,
         AppMainBotHalf,
-    }
+    },
+    data(){
+      return{
+        store,
+      }
+    },
   
 }
 
@@ -15,7 +21,7 @@ export default{
 
 <template>
 <AppMainTopHalf />
-<AppMainBotHalf />
+<AppMainBotHalf :number="store.number" :mail="store.mail" :gps="store.gps" />
 
 
 </template>

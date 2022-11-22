@@ -127,12 +127,12 @@ export default{
             width: 80%;
             margin: 0 auto;
             justify-content: end;
-            h1{
-                color: $primary-font-white;
-                font-size: 3.5rem;
-                
-            }
             &-text{
+                h1{
+                    color: $primary-font-white;
+                    font-size: 3.5rem;
+                                      
+                }
                 width: 30%;
 
                 div{

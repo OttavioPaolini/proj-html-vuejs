@@ -11,8 +11,8 @@ export default{
     <div class="container">
         <div class="flex">
             <div class="info">
-                <p>our business areas</p>
-                <h3>Logistics Services</h3>
+                <p class="blu-p">our business areas</p>
+                <h2>Logistics Services</h2>
                 <p>we are leaders in providing logistics services with a set of cutting edge technologies and team of experienced and renowned professionals.</p>
                  
             </div>
@@ -33,8 +33,8 @@ export default{
 <section class="main_company">
         <div class="flex">
             <div class="split">
-                <p>about the network</p>
-                <h2>The Company</h2>
+                <p class="blu-p">about the network</p>
+                <h2><span class="blu-shadow">The</span> Company</h2>
             </div>
             <div class="split">
                 <img src="../assets/img/about-5.jpg" alt="">
