@@ -40,6 +40,16 @@ export default{
 </section>
 
 <section class="main_company">
+    <div  class="pointer-box top">
+        <div v-for="n in 4" class="pointer-row">
+            <span v-for="n in 9" class="pointer"></span>
+        </div>
+    </div>
+    <div  class="pointer-box bot">
+        <div v-for="n in 4" class="pointer-row">
+            <span v-for="n in 9" class="pointer"></span>
+        </div>
+    </div>
     <div class="container">
         <div class="flex">
             <div id="test" class="split flex">
@@ -92,7 +102,7 @@ export default{
                 </div>
             </div>
             <div class="split split-dx">
-                <!-- <img id="img" src="../assets/img/about-5.jpg" alt=""> -->
+             
             </div>
         </div>
     </div>
@@ -150,11 +160,43 @@ export default{
 
 
 .main_company{
+    min-height: 100px;
+    position: relative;
     background-color: $bg-dark;
-    
+    .pointer-box{
+        
+        left: 50%;
+        position: absolute;
+        &.top{
+            transform: translate(-50% , -100%);
+            top: 0;
+        }
+        
+        &.bot{
+            transform: translate(-50% , +50%);
+            bottom: 0;
+        }
+
+
+        
+        .pointer{
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: rgba($color: $light-acqua, $alpha: .4);
+            display: inline-block;
+            margin: 0 1px;
+        }
+    }
+    .pointer-row{
+        height: 7px;
+    }
 #img{
     height: 100%;
 }
+    .container{
+        // position: relative;
+    }
     .split{
         width: calc(100% / 2);
         text-align: end;
